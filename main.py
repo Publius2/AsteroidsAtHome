@@ -1,5 +1,6 @@
 import pygame
 from constants import *
+from player import Player
 
 def main():
     #initialization
@@ -20,6 +21,9 @@ def main():
         #fill screen with black
         screen.fill('black')
 
+        #draw player on screen
+        player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
+        player.draw(screen)
 
 
         #refresh screen
