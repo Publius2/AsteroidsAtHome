@@ -12,6 +12,9 @@ def main():
 
     #create screen object
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
+
+    #create player
+    player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
     
     #game loop
     while True:
@@ -22,8 +25,9 @@ def main():
         screen.fill('black')
 
         #draw player on screen
-        player = Player(SCREEN_WIDTH/2, SCREEN_HEIGHT/2)
+        player.update(dt)
         player.draw(screen)
+        
 
 
         #refresh screen
