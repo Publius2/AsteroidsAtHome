@@ -49,7 +49,7 @@ def main():
             for shot in shots:
                 if member.is_colliding(shot):
                     shot.kill()
-                    member.kill()
+                    member.split()
         
 
 
